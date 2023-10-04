@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@keyframes fadeIn{
+    from{
+        opacity:0%;
+    }
+
+    to{
+        opacity:100%;
+    }
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+:root{
+    --clr-100: #e8e4d6;
+    --clr-90: rgb(200, 198, 192);
+
+    --clr-20: #53565a;
+    --clr-10: #242527;
+    --clr-0: #1b2332;
+
+    --accent: #5050a0;
+    --accent-dark: #5050a0;
+
+    --ff-sans: 'Barlow', sans-serif;
+    --ff-serif: 'Young Serif', serif;
+}
+
+html, body{
+    background-color: var(--clr-100);
+    color:  var(--clr-10);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Young Serif', serif;
+}
+
+p{
+    font-family: 'Barlow', sans-serif;
+}
+
+.sans-serif-title{
+    font-family: var(--ff-sans);
+}
+
+nav{
+    position: absolute;
+    right:0;
+    top:0;
+    z-index:999;
+    font-size:1rem;
+
+    text-align: right;
+    margin:1rem;
+    padding:1rem;
+    text-decoration: none;
+
+    & ul{
+        list-style: none;
+    }
+
+    & li{
+        margin-block:.25rem;
+    }
+
+    & a{
+        color: var(--clr-10);
+        text-decoration: none;
+        
+    }
+
+    & .active{
+        font-family: var(--ff-serif);
+        font-weight:700;
+    }
+}
+
+header{
+    position: relative;
+    display:flex;
+    height:100dvh;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+
+    animation-timing-function: linear;
+    animation-name: fadeIn;
+    animation-duration: .9s;
+    animation-iteration-count: 1;
+
+    color: var(--clr-10);
+    background-color: var(--clr-100);
+
+    & #name{
+        color: var(--accent)
+    }
+
+    & ul{
+        display:block;
+        text-align: center;
+        gap: 2rem;
+        margin-inline:auto;
+        list-style: none;
+    }
+
+    & h1{
+        font-size:2.7rem;
+        padding:1rem;
+    }
+
+    & li{
+        font-size:1.5rem;
+        display:inline;
+        margin-inline:1rem;
+    }
+}
+
+
+.section-title{
+    margin-block:1.5rem;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    max-width:100%;
+    min-height:50dvh;
+    padding:1rem;
+
+    z-index: 2;
+
+    & h2{
+        font-size:2.5rem;
+        display:block;
+        align-items: center;
+        margin-inline:auto;
+    }
+
+    & p{
+        font-size:1.25rem;
+        line-height:1.4;
+        margin-block:1rem;
+        max-width:90%;
+    }
+
+    & .content-container{
+        width:60%;
+        margin-inline:auto;
+    }
+
+    & .link{
+        display:inline-flex;
+        background-color: var(--clr-100);
+        padding:1rem;
+        text-decoration: none;
+        margin-block:1rem;
+        color: var(--clr-10);
+
+        align-items: center;
+        justify-content: center;
+        /* border-radius: .25rem; */
+        transition: .1s linear;
+        box-shadow: 10px 10px 0 3px;
+
+        &:hover{
+            box-shadow: 0px 0px 0px 0px;
+        }
+    }
+}
+
+#my-work{
+    background-color: var(--accent);
+    color: var(--clr-100);
+}
+
+#about{
+    min-height:65dvh;
+    margin-inline:auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.title{
+    position: relative;
+}
+
+#highlight{
+    width:8ch;
+    height:1rem;
+    background-color: var(--accent);
+}
+
+.about-link{
+    background-color: var(--accent) !important;
+    color: var(--clr-100) !important;
+    
+    box-shadow: 7px 10px 0 3px var(--clr-10) !important;
+
+        &:hover{
+            box-shadow: 0px 0px 0px 0px var(--clr-100) !important;
+        }
+}
+
+.wrapper{
+    min-width: none;-width: 100%;
+    margin-inline:auto;
+}
+
+footer{
+    text-align: center;
+    font-size: .95rem;
+    padding:2.5rem;
+
+    & .page-link{
+        display:inline-block;
+        margin-block: .5rem;
+        border:1px solid var(--clr-10);
+        padding:.25rem 1rem;
+        border-radius: 5rem;
+        transition: .1s linear;
+
+        &:hover{
+            background-color: var(--clr-10);
+            color:var(--clr-100)
+        }
+    }
+
+    & .middot{
+        font-weight:500;
+    } 
+
+    & .email{
+        display:block;
+        margin-block:0;
+        margin-inline:auto;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    & a{
+        color: var(--clr-10);
+        text-decoration:none;
+
+        
+    }
+}
