@@ -1,4 +1,5 @@
-# personal
- going to be a little personal website thing.
+# portfolio
+ going to be my photography and web design portfolio. still working on this as if nov. 2nd, 2023
+
+redesigining it and gojng for a diff style than when i started 
  
-![portfolio](https://github.com/nathanielhowe97/portfolio/assets/130931122/db235573-ee07-4d01-aefa-8fe6e887bec6)
