@@ -14,77 +14,55 @@
 }
 
 .work-container{
-    margin-block:1rem;
-    height:20rem;
-    border-radius: .25rem;
-    align-items:last baseline;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+    margin-inline:auto;
+    max-width:90%;
+    margin-block:2rem;
 
-    display:grid;
-    grid-template-rows: 20% 80%;
-    
-    & *{
-        padding:1rem;
+    & h2{
+        margin-block:1rem;
+        font-size:2rem;
+    }
+
+    & h3{
+        margin:0;
+        padding:0;
+        position: absolute;
+        color: var(--clr-100);
+        bottom:1rem;
+        left:1rem;
+        font-family: var(--ff-sans);
     }
 }
 
-.crosspoint{
-    background-image: url("../images/crosspoint.png");
-    background-size: cover;
+.col{
+    display:flex;
+    flex-direction: column !important;
 }
 
-.photowalk{
-    background-image: url("../images/photowalk.png");
-    background-size: cover;
-}
-
-.nature{
-    background-image: url("../images/nature.png");
-    background-size: cover;
-}
-
-.work{
+.right-col{
+    width:80%;
     display:grid;
-    grid-template-columns: 1fr 1fr;
-    width:100%;
+    grid-template-columns: 1fr 1fr 1fr;
     gap:1rem;
 }
 
-@media only screen and (max-width:1525px){
-    .work{
-        display:grid;
-        grid-auto-flow: row;
-    }
-}
+.project{
+    object-fit: cover;
+    position: relative;
+    margin:0;
+    padding:0;
 
-@media only screen and (max-width:1300px){
-    .work{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    }
-}
-
-@media only screen and (max-width:800px){
-    .content-container{
-        max-width:200% !important;
-    }
-}
-
-@media only screen and (max-width:500px){
-    .content-container{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .work{
-        width:150%;
+    & img{
+        aspect-ratio: 3 /2;
+        object-fit: cover;
         margin:0;
         padding:0;
-    }
-
-    .work-container{
-        width:100%;
-        margin-inline:auto;
+        max-width:100%;
+        user-select: none;
     }
 }

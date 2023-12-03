@@ -1,0 +1,47 @@
+:root{
+    --clr-100: #e8e4d6;
+    --clr-90: rgb(200, 198, 192);
+
+    --clr-20: #53565a;
+    --clr-10: #242527;
+    --clr-0: #1b2332;
+
+    --accent: #5959a9;
+    --accent-dark: #5050a0;
+
+    --ff-sans: 'Barlow', sans-serif;
+    --ff-serif: 'Young Serif', serif;
+}
+
+img{
+    height:70dvh;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 0 var(--clr-90);
+}
+
+main{
+    display:block;
+    margin-inline:auto;
+}
+
+.columns{
+    display:grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;
+    gap:1rem;
+}
+
+.galleries-wrapper{
+    display:grid;
+    grid-auto-flow: row;
+    gap:1rem;
+}
+
+.single{
+    width:100%;
+    display:block;
+
+    & img{
+        width:100%;
+    }
+}
