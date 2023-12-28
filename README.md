@@ -1,2 +1,2 @@
-# personal
- going to be a little personal website thing.
+# portfolio
+gonna be a neat portfolio for my web and photography services
