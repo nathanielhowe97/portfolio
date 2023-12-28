@@ -9,68 +9,88 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
+
+    <script src="hamburger.js" defer></script>
+
     <title>Nathaniel Howe</title>
 </head>
 <body>
+    <noscript>Javascript is required to properly run this app on mobile devices</noscript>
     <div class="wrapper">
         <nav>
-            
-            <a href="index.html">
+            <section class="nav-wrapper">
                 <div class="logo-container">
-                    <img src="images/logo.png" class="logo" alt="">
-                    <strong>Nathaniel Howe</strong>
+                    <img src="images/logo.jpg" class="logo" alt="Logo">
+                    <a href="index.html" class="icon-and-text">
+                        <p>Nathaniel Howe</p>
+                    </a>
                 </div>
-            </a>
 
-            <ul>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="mywork.html">My work</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+                <button class="hamburger">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M4 17.27v-1h16v1zm0-4.77v-1h16v1zm0-4.77v-1h16v1z"/></svg>
+                </button>
+
+                <ul class="nav-links">
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="mywork.html">My work</a></li>
+                    <li><a href="contact.html" class="contact" >Contact</a></li>
+                </ul>
+            </section>
         </nav>
 
-        <header>
-            <div class="header-container">
-        
-                <h1>hi, i'm nathaniel howe</h1>
-                <ul>
-                    <li>Web designer</li> +
-                    <li>Photographer</li>
-                </ul>
+        <div class="content-wrapper">
+            <header>
+                <div class="header-container">
+                    <div class="header--img">
+                        <img src="images/hero_img_moible.png" class="hero--img" alt="">
+                    </div>
+
+            
+                    <div class="header--text">
+                        <h1 class="primary-heading">hi, i'm
+                            <span class="name">Nathaniel Howe</span>
+                        </h1>
+                        <p class="small-copy">14 year old Frontend Web Developer & Photographer located in the Florida panhandle.</p>
+                        <a class="cta cta-pri" href="mywork.html">See my work</a>
+                        <a class="cta cta-sec" href="mywork.html">Get in touch with me</a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- <main>
+                <section id="work">
+                    <h2 class="secondary-heading">My work</h2>
+                    
+                    <div class="work-card">
+                        <img src="images/crosspoint_06.jpg" alt="An electric guitarist playing at Crosspoint, Bluewater Bay">
+                        <p class="small-copy">An electric guitarist playing at Crosspoint, Bluewater Bay.</p>
+                    </div>
+
+                    <div class="work-card">
+                        <img src="images/crosspoint_01.jpg" alt="Worship leader playing the keyboard at Crosspoint, Bluewater Bay">
+                        <p class="small-copy">Worship leader playing the keyboard at Crosspoint, Bluewater Bay</p>
+                    </div>
+
+                    <a href="mywork.html" class="cta cta-pri">See all of my work</a>
+                </section>
+            </main> -->
+        </div>
+
+        <!-- <footer>
+            <div class="footer-wrapper">
+                <div class="footer--contact">
+                    <h2 class="secondary-heading">Want to get in touch?</h2>
+                    <a href="mailto:nathaniel.s.howe@gmail.com" class="cta cta-sec">Email me</a>
+                </div>
+
+                <p>&copy; Nathaniel Howe</p>
+                <div class="pagination-bottom">
+                    <a class="page-link" href="experience">Experience</a>
+                    <a class="page-link" href="mywork.html">My work</a>
+                    <a class="email" href="mailto:nathaniel.howe.work@gmail.com">nathaniel.s.howe@gmail.com</a>
+                </div>
             </div>
-        </header>
-
-        <main>
-            <div class="galleries-wrapper">
-                <section class="image-gallery columns">
-                    <img src="images/manger.jpg" alt="howesDecor wooden manger and barn">
-                    <img src="images/crosspoint.jpg" alt="Crosspoint Singer leading worship song">
-                </section>
-
-                <section class="image-gallery single">
-                    <img src="images/interactiveApp.png" alt="Interactive homepage project">
-                </section>
-
-                <section class="image-gallery columns">
-                    <img src="images/journalApp.png" alt="Journal app project">
-                    <img src="images/hands_raised.jpg" alt="Crosspoint congregation member raising hands in surrender">
-                </section>
-
-                <section class="image-gallery single">
-                    <img src="images/congregation.jpg" alt="Crosspoint group of congregation raising their hands">
-                </section>
-                
-            </div>
-        </main>
-
-        <footer>
-            <p>&copy; Nathaniel Howe</p>
-            <div class="pagination-bottom">
-                <a class="page-link" href="experience">Experience</a>
-                <a class="page-link" href="mywork.html">My work</a>
-                <a class="email" href="mailto:nathaniel.howe.work@gmail.com">nathaniel.s.howe@gmail.com</a>
-            </div>
-        </footer>
+        </footer>  -->
     </div>
 </body>
 </html>
