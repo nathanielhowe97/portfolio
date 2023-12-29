@@ -60,6 +60,25 @@
             display:block;
         }
     }
+
+    .row, .grid--two-columns, .grid--four-columns{
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+        margin-inline:auto;
+    }
+
+    .statistic-wrapper{
+        width:100%;
+    }
+
+    & .statistic{
+        width:100%;
+
+        & .small-copy{
+            max-width:20ch;
+        }
+    }
+
 }
 
 @media only screen and (min-width:441px){
@@ -97,6 +116,11 @@
             margin-right:0.5rem;
         }
     }
+
+    .grid--four-columns{
+        grid-template-columns: 1fr 1fr;
+
+    }
 }
 
 @media only screen and (min-width: 724px){
@@ -111,11 +135,25 @@
             text-wrap: balance;
         }
 
+        & .cta{
+            display:block;
+            max-width:40ch;
+        }
+
         & img{
             max-width:100%;
         }
     }
+
+    .grid--two-columns{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid--four-columns{
+        grid-template-columns: 1fr 1.5fr 1fr 1.5fr;
+    }
 }
+
 
 @media only screen and (min-width:1134px){
     .content-wrapper{
@@ -128,5 +166,65 @@
     .content-wrapper{
         max-width:50%;
         margin-inline:auto;
+    }
+}
+
+.small-copy span{
+    display:block;
+    margin-block:0.5rem;
+}
+
+header,.section{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height:70svh;
+}
+
+header .small-copy{
+    max-width:45ch;
+}
+
+.section--about-me{
+    margin-block:13dvh;
+}
+
+.row--block{
+    background-color: var(--background-100);
+    padding:1rem;
+    border-radius:0.5rem;
+
+    & p{
+        max-width:80%;
+        text-align: balance;
+        margin-block:1rem 0;
+    }
+}
+
+.statistic{
+    max-width:100%;
+    /* user-select: none; */
+    cursor:default !important;
+
+    display:flex;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+
+    & *{
+        display:block;
+        margin:0.5rem;
+        line-height:1.2;
+    }
+
+    & .cta{
+        outline:2px solid var(--primary-200);
+        color:var(--primary-500);
+        margin-block:1rem;
+
+        &:hover{
+            color: var(--text-950);
+        }
     }
 }

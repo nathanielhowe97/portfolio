@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Noto%20Sans%20Khmer:700|Noto%20Sans%20Khmer:400');
 @import url('https://fonts.googleapis.com/css?family=Noto%20Serif%20HK:700|Noto%20Serif%20HK:400');
 
+/* resets */
+
+em{
+    font-style: italic;
+}
 
 *{
     margin:0;
@@ -79,7 +84,8 @@
       --accent-950: #130d07;
     }
   }
-  @media (prefers-color-scheme: dark) {
+  
+@media (prefers-color-scheme: dark) {
     :root {
       --text-50: #100c0a;
       --text-100: #1f1914;
@@ -173,8 +179,13 @@ nav{
     & a{
         transition: .15s linear;
 
-        &:hover{
+        &:hover, &:focus-visible{
             color: var(--primary-500);
+        }
+
+        &:focus-visible{
+            outline:1px solid var(--primary-500);
+            border-radius:0.5rem;
         }
     }
 
@@ -198,7 +209,8 @@ nav{
 
     & a{
         text-decoration: none;
-        color: var(--text-800);
+        color: var(--text-950);
+        padding:0.25rem;
     }
 
 
@@ -220,6 +232,17 @@ nav{
     margin-block:2.5rem;
 }
 
+.secondary-heading--less-spacing{
+    margin-block:1rem;
+}
+
+.small-heading{
+    font-family: var(--ff-heading);
+    font-size: 1.125rem;
+    font-weight:700;
+    line-height: 1.2;
+}
+
 .small-copy{
     display:block;
     line-height:1.75;
@@ -227,7 +250,6 @@ nav{
 
     margin-block:2rem;
 }
-
 
 .cta{
     text-decoration: none;
@@ -262,8 +284,91 @@ nav{
     }
 }
 
+.nav-active{
+    color: var(--primary-500) !important;
+}
+
 noscript{
     display:none;
+}
+
+.grid--two-columns{
+    display:grid;
+    grid-auto-flow: column;
+    gap:1rem;
+
+    & .column{
+        display:flex;
+        flex-direction: column;
+        background-color: var(--background-100);
+        padding:1rem;
+        border-radius:.5rem;
+        text-wrap: pretty;
+
+        transition: .15s linear;
+
+        & .small-copy{
+            margin-bottom:0;
+        }
+
+        &:hover{
+            scale:1.05;
+        }
+    }
+
+}
+
+.grid--four-columns{
+    display:grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1.5fr 1fr 1.5fr;
+    gap:1rem;
+
+    & .column{
+        display:flex;
+        flex-direction: column;
+        background-color: var(--background-100);
+        padding:1rem;
+        border-radius:.5rem;
+        text-wrap: pretty;
+
+        transition: .15s linear;
+
+        & .small-copy{
+            margin-bottom:0;
+        }
+
+        &:hover{
+            scale:1.05;
+        }
+    }
+
+}
+
+.grid--two-rows{
+    display:grid;
+    grid-auto-flow: row;
+    gap:1rem;
+
+    & .row{
+        display:flex;
+        flex-direction: column;
+        background-color: var(--background-100);
+        padding:1rem;
+        border-radius:.5rem;
+        text-wrap: pretty;
+
+        transition: .15s linear;
+
+        & .small-copy{
+            margin-bottom:0;
+        }
+
+        &:hover{
+            scale:1.05;
+        }
+    }
+
 }
 
 /* animations */
