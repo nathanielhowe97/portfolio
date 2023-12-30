@@ -24,6 +24,8 @@
 
     .nav-wrapper{
         position: relative;
+        z-index:9999;
+        background-color: var(--background-50);
     }
 
     .nav-links--visible{
@@ -38,7 +40,7 @@
         top:3.9rem;
         padding-block:1rem;
         background-color: var(--background-50);
-        z-index:99;
+        z-index:9999;
         overflow-y:hidden;
     }
 
