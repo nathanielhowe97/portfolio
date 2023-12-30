@@ -67,6 +67,7 @@
             border-bottom-right-radius: 18rem 10rem;
             margin-block:2rem;
             object-fit: cover;
+            z-index:2;
         }
 
         & *{
