@@ -371,6 +371,10 @@ noscript{
 
 }
 
+.no-overflow{
+    overflow:hidden !important;
+}
+
 /* animations */
 
 @keyframes fade{
