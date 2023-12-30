@@ -1,2 +1,3 @@
-# personal
- going to be a little personal website thing.
+# portfolio
+ wip
+trello: https://trello.com/b/YrxJq3GR/howesdecor
